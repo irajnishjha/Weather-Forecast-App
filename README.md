@@ -50,7 +50,6 @@ Weather-Forecast-App-main/
 ├── index.html                # Main UI structure
 ├── styles.css                # Styling & theme enhancements
 ├── script.js                 # API logic, DOM updates, UI interactions
-│
 └── src/                      # Assets
     ├── clear.jpg
     ├── clouds.jpg
