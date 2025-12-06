@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Favicon -->
+    <link rel="icon" href="src/weather-icon-new.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Top bar with title + dark mode toggle -->
+        <header class="app-header">
+            <h1 class="app-title">Weather App</h1>
+            <div class="header-controls">
+                <span class="mode-label">Light</span>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="mode-label">Dark</span>
+            </div>
+        </header>
+
+        <!-- Main glassmorphism card -->
+        <main class="container">
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" id="locationInput" placeholder="Enter a city">
+                    <button id="searchButton">Search</button>
+                </div>
+                <p class="helper-text">
+                    🔍 Search by city name or allow location access to auto-detect weather.
+                </p>
+            </div>
+
+            <!-- Status Row: Loader + Message -->
+            <div class="status-row">
+                <div id="loader" class="loader hidden"></div>
+                <p id="p1"></p>
+            </div>
+
+            <!-- Weather Content -->
+            <section class="weather-content fade-target">
+                <!-- Main weather block -->
+                <div class="weather-main">
+                    <img id="weather-icon" class="weather-icon" src="src/weather-icon-new.png" alt="Weather icon">
+                    <div class="weather-main-text">
+                        <h2 id="location" class="city-name"></h2>
+                        <p id="temperature" class="temperature"></p>
+                        <p id="description" class="description"></p>
+                    </div>
+                </div>
+
+                <!-- Today’s Highlights -->
+                <section class="highlights">
+                    <h3 class="section-title">Today's Highlights</h3>
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <span class="label">Feels Like</span>
+                            <span id="feels-like" class="value"></span>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="label">Humidity</span>
+                            <span id="humidity" class="value"></span>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="label">Wind</span>
+                            <span id="wind" class="value"></span>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="label">Visibility</span>
+                            <span id="visibility" class="value"></span>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="label">Pressure</span>
+                            <span id="pressure" class="value"></span>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="label">Sunrise / Sunset</span>
+                            <span id="sun-cycle" class="value"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3-hour Forecast Strip -->
+                <section class="forecast-section">
+                    <h3 class="section-title">Next Hours</h3>
+                    <div id="forecast-container" class="forecast-container">
+                        <!-- Forecast cards injected by JS -->
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <span>Powered by OpenWeather</span>
+            <span>Made with ❤️ by Rajnish Kumar Jha</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
