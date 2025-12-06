@@ -362,6 +362,6 @@ function resetWeatherInfo() {
     visibilityElement.textContent = "";
     pressureElement.textContent = "";
     sunCycleElement.textContent = "";
-    weatherIconElement.src = "src/weather-icon.png";
+    weatherIconElement.src = "src/weather-icon-new.png";
     weatherIconElement.alt = "Weather icon";
 }
